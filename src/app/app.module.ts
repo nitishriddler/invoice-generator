@@ -10,9 +10,10 @@ import { ProductComponent } from './product/product.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { CustomerComponent } from './customer/customer.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductComponent],
+  declarations: [AppComponent, HomeComponent, ProductComponent, CustomerComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
