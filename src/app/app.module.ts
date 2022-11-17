@@ -11,9 +11,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CustomerComponent } from './customer/customer.component';
+import { SellerComponent } from './seller/seller.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { CustomerListComponent } from './customer-list/customer-list.component';
+import { SellerListComponent } from './seller-list/seller-list.component';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductComponent, CustomerComponent],
+  declarations: [AppComponent, HomeComponent, ProductComponent, CustomerComponent, SellerComponent, ProductListComponent, CustomerListComponent, SellerListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -23,6 +28,7 @@ import { CustomerComponent } from './customer/customer.component';
     FlexLayoutModule,
     MatFormFieldModule,
     MatInputModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

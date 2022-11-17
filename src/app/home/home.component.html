@@ -5,24 +5,24 @@
     <div class="header-right">
         <a>Home</a>
         <a routerLink="/product">Product</a>
-        <a>Customer</a>
-        <a>Seller</a>
+        <a routerLink="/customer">Customer</a>
+        <a routerLink="/seller">Seller</a>
     </div>
 </div>
 
 <div fxLayout="row" fxLayoutAlign="space-around none">
-    <div>
-        <h1>Product List</h1>
+    <div routerLink="/product-list" style="cursor: pointer;">
+        <h1 >Product List</h1>
         <p>Resize the browser window to see the effect.</p>
         <p>Some content..</p>
     </div>
-    <div>
-        <h1>Customer List</h1>
+    <div style="cursor: pointer;" routerLink="/customer-list">
+        <h1 >Customer List</h1>
         <p>Resize the browser window to see the effect.</p>
         <p>Some content..</p>
     </div>
-    <div>
-        <h1>Seller List</h1>
+    <div style="cursor: pointer;" routerLink="/seller-list">
+        <h1 >Seller List</h1>
         <p>Resize the browser window to see the effect.</p>
         <p>Some content..</p>
     </div>

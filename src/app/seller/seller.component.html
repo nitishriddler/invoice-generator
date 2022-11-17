@@ -18,13 +18,13 @@
 
 
 
-<div [style.marginTop]="'30px'" [style.marginLeft]="'30px'" fxLayout="column" fxLayoutGap="30px">
+<div [style.marginTop]="'30px'" [style.marginLeft]="'30px'" fxLayout="column" dir="ltr" fxLayoutGap="30px">
     
 
-      <div class="ps">
+      <div >
         <mat-form-field appearance="fill">
           <mat-label>Add product</mat-label>
-          <input matInput placeholder="Name of product" >
+          <input matInput placeholder="Name of product">
           <mat-hint>Fill up</mat-hint>
         </mat-form-field>
     </div>
@@ -38,12 +38,10 @@
         <mat-form-field appearance="fill">
           <mat-label>Mrp</mat-label>
           <input matInput placeholder="Prize of product">
-          <mat-hint>Fill up</mat-hint>
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Auto generate</mat-hint>
         </mat-form-field>
     </div>
 
 
-</div>
-<div [style.marginLeft]="'30px'"  [style.marginTop]="'30px'">
-<button mat-raised-button color="primary">Save</button>
 </div>
