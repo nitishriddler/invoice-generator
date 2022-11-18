@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SellerService } from 'src/services/seller.service';
 import { seller } from '../model/seller.model';
 @Component({
   selector: 'app-seller',
@@ -8,13 +9,21 @@ import { seller } from '../model/seller.model';
 export class SellerComponent implements OnInit {
   seller!:seller
 
-  constructor() { }
+  constructor(private sellerService:SellerService) { }
 
   ngOnInit(): void {
     this.seller = {};
   }
-  postsellerdata(data: any){
-    console.log(data);
+  postAllSeller(data: any){
+    this.sellerService.postAllSeller(data).subscribe({
+      next:(res)=>{
+        alert("Detail of seller has been submited")
+        location.reload(); 
+      },
+      error:(err)=>{
+        alert("Something went wrong")
+      }
+    })
   }
 
 }

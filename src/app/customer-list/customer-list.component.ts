@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CustomerService } from 'src/services/customer.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { CustomerService } from 'src/services/customer.service';
   styleUrls: ['./customer-list.component.scss'],
 })
 export class CustomerListComponent implements OnInit {
-  constructor(private customerService: CustomerService) {}
+  constructor(private router:Router,private customerService: CustomerService) {}
   customerList: any;
 
   ngOnInit(): void {

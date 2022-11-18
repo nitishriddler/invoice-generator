@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SellerService } from 'src/services/seller.service';
 
 
@@ -9,7 +10,7 @@ import { SellerService } from 'src/services/seller.service';
 })
 export class SellerListComponent implements OnInit {
 
-  constructor(private SellerService:SellerService) { }
+  constructor(private router:Router, private SellerService:SellerService) { }
   sellerList:any;
 
   ngOnInit(): void {

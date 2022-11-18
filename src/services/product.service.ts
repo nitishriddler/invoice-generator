@@ -12,6 +12,9 @@ export class ProductService {
     return this.https.get('http://localhost:3000/product');
     
   }
+  postAllProduct(data:any){
+    return this.https.post('http://localhost:3000/product', data);
+  }
 
 
 }

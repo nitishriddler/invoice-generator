@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/services/product.service';
 import { product } from '../model/product.model';
 @Component({
   selector: 'app-product',
@@ -8,13 +9,22 @@ import { product } from '../model/product.model';
 export class ProductComponent implements OnInit {
   product!: product;
 
-  constructor() {}
+  constructor(private productService:ProductService) {}
 
   ngOnInit(): void {
     this.product = {};
   }
 
-  postData(data: any) {
-    console.log(data);
+  postAllProduct(data: any) {
+    this.productService.postAllProduct(data).subscribe({
+      next:(res)=>{
+        alert("Product has been added sucessfully")
+        location.reload();
+      },
+      error:(err)=>{
+        alert("Something Went worng")
+      }
+    })
   }
+
 }

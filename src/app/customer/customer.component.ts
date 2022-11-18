@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomerService } from 'src/services/customer.service';
 import { customer } from '../model/customer.model';
 @Component({
   selector: 'app-customer',
@@ -8,12 +9,20 @@ import { customer } from '../model/customer.model';
 export class CustomerComponent implements OnInit {
   customer!: customer;
 
-  constructor() {}
+  constructor(private coustmerService: CustomerService) {}
 
   ngOnInit(): void {
     this.customer = {};
   }
-  postcustomerdata(data: any) {
-    console.log(data);
+  postAllcustomer(data: any) {
+    this.coustmerService.postAllCustomer(data).subscribe({
+      next: (res) => {
+        alert('Detail of customer has been saved');
+        location.reload();
+      },
+      error: (er) => {
+        'Something went wrong ';
+      },
+    });
   }
 }

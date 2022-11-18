@@ -11,4 +11,7 @@ export class CustomerService {
   getAllCustomers(){
     return this.http.get('http://localhost:3000/customer')
   }
+  postAllCustomer(data:any){
+    return this.http.post('http://localhost:3000/customer',data)
+  }
 }

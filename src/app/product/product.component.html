@@ -16,9 +16,9 @@
     </h1>
 </div>
 
-<form #productForm="ngForm" (ngSubmit)="postData(productForm.value)">
+<form #productForm="ngForm" (ngSubmit)="postAllProduct(productForm.value)">
     <div [style.marginTop]="'30px'" [style.marginLeft]="'30px'" fxLayout="column" fxLayoutGap="30px">
-        <div class="ps" >
+        <div class="ps">
             <mat-form-field appearance="fill">
                 <mat-label>Product Name</mat-label>
                 <input matInput placeholder="Name of product" name="name" [(ngModel)]="product.name">

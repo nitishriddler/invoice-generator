@@ -15,12 +15,22 @@ import { SellerComponent } from './seller/seller.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { SellerListComponent } from './seller-list/seller-list.component';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductComponent, CustomerComponent, SellerComponent, ProductListComponent, CustomerListComponent, SellerListComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ProductComponent,
+    CustomerComponent,
+    SellerComponent,
+    ProductListComponent,
+    CustomerListComponent,
+    SellerListComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,7 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

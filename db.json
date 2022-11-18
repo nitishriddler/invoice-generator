@@ -1,9 +1,79 @@
 {
-    "product": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "customer": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "seller": { "name": "typicode" }
-  }
+  "product": [
+    {
+      "name": "Nasree",
+      "Qty": "2",
+      "Mrp": "12",
+      "id": 1
+    },
+    {
+      "name": "Nasree",
+      "Qty": "2",
+      "Mrp": "12",
+      "id": 1
+    },
+    {
+      "name": "Nasree",
+      "Qty": "2",
+      "Mrp": "12",
+      "id": 1
+    },
+    {
+      "name": "Nasree",
+      "Qty": "2",
+      "Mrp": "12",
+      "id": 1
+    },
+    {
+      "name": "Nasree",
+      "Qty": "2",
+      "Mrp": "12",
+      "id": 1
+    },
+    {
+      "name": "Nasree",
+      "Qty": "2",
+      "Mrp": "12",
+      "id": 1
+    }
+  ],
+  "customer": [
+    {
+      "name": "asif",
+      "address": "sangam",
+      "id": 1
+    },
+    {
+      "name": "asif",
+      "address": "sangam",
+      "phone": "9898989",
+      "id": 2
+    },
+    {
+      "name": "dsdsd",
+      "address": "dsd",
+      "phone": "32",
+      "id": 3
+    },
+    {
+      "name": "dsdsd",
+      "address": "dsd",
+      "phone": "32",
+      "id": 4
+    },
+    {
+      "name": "dsd",
+      "address": "sdd",
+      "phone": "2132",
+      "id": 5
+    }
+  ],
+  "seller": [
+    {
+      "name": "json",
+      "address": "khanput",
+      "phone": "987655",
+      "id": 1
+    }
+  ]
+}

@@ -10,4 +10,8 @@ export class SellerService {
   getAllSeller() {
     return this.http.get('http://localhost:3000/seller');
   }
+  postAllSeller(data:any) {
+    return this.http.post('http://localhost:3000/seller',data);
+
+  }
 }
