@@ -16,34 +16,32 @@
     </h1>
 </div>
 
-
-
-<div [style.marginTop]="'30px'" [style.marginLeft]="'30px'" fxLayout="column" fxLayoutGap="30px">
-    
-
-      <div class="ps">
-        <mat-form-field appearance="fill">
-          <mat-label>Add product</mat-label>
-          <input matInput placeholder="Name of product" >
-          <mat-hint>Fill up</mat-hint>
-        </mat-form-field>
+<form #productForm="ngForm" (ngSubmit)="postData(productForm.value)">
+    <div [style.marginTop]="'30px'" [style.marginLeft]="'30px'" fxLayout="column" fxLayoutGap="30px">
+        <div class="ps" >
+            <mat-form-field appearance="fill">
+                <mat-label>Product Name</mat-label>
+                <input matInput placeholder="Name of product" name="name" [(ngModel)]="product.name">
+                <mat-hint>Fill up</mat-hint>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Quantity</mat-label>
+                <input matInput placeholder="No. of product" name="Qty" [(ngModel)]="product.Qty">
+                <mat-hint>Fill up</mat-hint>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>MRP</mat-label>
+                <input matInput placeholder="Prize of product" name="Mrp" [(ngModel)]="product.Mrp">
+                <mat-hint>Fill up</mat-hint>
+            </mat-form-field>
+        </div>
     </div>
-    <div>
-        <mat-form-field appearance="fill">
-          <mat-label>Quantity</mat-label>
-          <input matInput placeholder="No. of product">
-          <mat-hint>Fill up</mat-hint>
-        </mat-form-field>
-    </div><div>
-        <mat-form-field appearance="fill">
-          <mat-label>Mrp</mat-label>
-          <input matInput placeholder="Prize of product">
-          <mat-hint>Fill up</mat-hint>
-        </mat-form-field>
+
+    <div [style.marginLeft]="'30px'" [style.marginTop]="'30px'">
+        <button mat-raised-button color="primary" type="submit">Save</button>
     </div>
-
-
-</div>
-<div [style.marginLeft]="'30px'"  [style.marginTop]="'30px'">
-<button mat-raised-button color="primary">Save</button>
-</div>
+</form>

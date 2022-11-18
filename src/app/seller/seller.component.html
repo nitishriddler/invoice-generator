@@ -11,37 +11,37 @@
 </div>
 <div [style.marginTop]="'10px'" [style.marginLeft]="'30px'">
     <h1>
-        Add Product
+        Add seller details
 
     </h1>
 </div>
 
-
-
-<div [style.marginTop]="'30px'" [style.marginLeft]="'30px'" fxLayout="column" dir="ltr" fxLayoutGap="30px">
-    
-
-      <div >
-        <mat-form-field appearance="fill">
-          <mat-label>Add product</mat-label>
-          <input matInput placeholder="Name of product">
-          <mat-hint>Fill up</mat-hint>
-        </mat-form-field>
-    </div>
-    <div>
-        <mat-form-field appearance="fill">
-          <mat-label>Quantity</mat-label>
-          <input matInput placeholder="No. of product">
-          <mat-hint>Fill up</mat-hint>
-        </mat-form-field>
-    </div><div>
-        <mat-form-field appearance="fill">
-          <mat-label>Mrp</mat-label>
-          <input matInput placeholder="Prize of product">
-          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          <mat-hint>Auto generate</mat-hint>
-        </mat-form-field>
+<form #customerForm="ngForm" (ngSubmit)="postsellerdata(customerForm.value)">
+    <div [style.marginTop]="'30px'" [style.marginLeft]="'30px'" fxLayout="column" fxLayoutGap="30px">
+        <div class="ps" >
+            <mat-form-field appearance="fill">
+                <mat-label>Seller Name</mat-label>
+                <input matInput placeholder="Seller Name" name="name" [(ngModel)]="seller.name">
+                <mat-hint>Fill up</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="as">
+            <mat-form-field appearance="fill">
+                <mat-label>Address</mat-label>
+                <input matInput placeholder="Your address" name="address" [(ngModel)]="seller.address">
+                <mat-hint>Fill up</mat-hint>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Mobile number</mat-label>
+                <input matInput placeholder="Phone number" name="phone" [(ngModel)]="seller.phone">
+                <mat-hint>Fill up</mat-hint>
+            </mat-form-field>
+        </div>
     </div>
 
-
-</div>
+    <div [style.marginLeft]="'30px'" [style.marginTop]="'30px'">
+        <button mat-raised-button color="primary" type="submit">Save</button>
+    </div>
+</form>

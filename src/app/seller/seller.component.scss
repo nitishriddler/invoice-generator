@@ -46,7 +46,16 @@
         float: none;
     }
 }
-.mat-form-field{
-    width:50% !important;
- }
- 
+
+.ps {
+    .mat-form-field {
+
+        width: 40% !important;
+    }
+}
+.as {
+    .mat-form-field {
+
+        width: 40% !important;
+    }
+}

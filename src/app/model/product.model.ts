@@ -1,6 +1,6 @@
-export interface product{
-    id?: number,
+export interface product {
+     id?: number,
     name?: string,
-    qty?: number,
-    mrp?: number,
+    Qty?: number,
+    Mrp?: number,
 }

@@ -16,6 +16,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { SellerListComponent } from './seller-list/seller-list.component';
 import {MatButtonModule} from '@angular/material/button';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, ProductComponent, CustomerComponent, SellerComponent, ProductListComponent, CustomerListComponent, SellerListComponent],
@@ -29,6 +31,9 @@ import {MatButtonModule} from '@angular/material/button';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

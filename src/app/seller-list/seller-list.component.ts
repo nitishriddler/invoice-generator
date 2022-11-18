@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SellerService } from 'src/services/seller.service';
+
 
 @Component({
   selector: 'app-seller-list',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SellerListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private SellerService:SellerService) { }
+  sellerList:any;
 
   ngOnInit(): void {
+    this.getAllSeller();
   }
+ getAllSeller(){
+  this.SellerService.getAllSeller().subscribe(res =>{
+    this.sellerList = res;
+  })
 
+ }
 }
