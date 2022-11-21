@@ -17,6 +17,12 @@
       "Qty": "2",
       "Mrp": "20",
       "id": 3
+    },
+    {
+      "name": "Bottle",
+      "Qty": "9",
+      "Mrp": "200",
+      "id": 4
     }
   ],
   "customer": [
