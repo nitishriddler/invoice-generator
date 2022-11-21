@@ -19,6 +19,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { MatTableModule } from '@angular/material/table';
     ProductListComponent,
     CustomerListComponent,
     SellerListComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +48,7 @@ import { MatTableModule } from '@angular/material/table';
     ReactiveFormsModule,
     HttpClientModule,
     MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent],

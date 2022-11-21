@@ -1,19 +1,15 @@
-<div class="header">
-    <a class="logo">
-        <mat-icon>healing</mat-icon>Nit Medicos
-    </a>
-    <div class="header-right">
-        <a routerLink="/home">Home</a>
-        <a routerLink="/product">Product</a>
-        <a routerLink="/customer">Customer</a>
-        <a routerLink="/seller">Seller</a>
-    </div>
-</div>
-<div [style.marginTop]="'10px'" [style.marginLeft]="'30px'">
-    <h1>
-        Add Product
+<app-header></app-header>
+<div [style.marginTop]="'10px'" [style.marginLeft]="'30px'" fxLayoutAlign="space-between center">
+    <div>
+        <h1>
+            Add Product
 
-    </h1>
+        </h1>
+    </div>
+    <div fxLayoutGap="20px" [style.marginRight]="'30px'"  >
+        <button mat-raised-button color="accent" onclick="history.back()">Back</button>
+        <button mat-raised-button routerLink="/product-list">Product-list</button>
+    </div>
 </div>
 
 <form #productForm="ngForm" (ngSubmit)="postAllProduct(productForm.value)">

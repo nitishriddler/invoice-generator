@@ -14,8 +14,8 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
     this.product = {};
   }
-
-  postAllProduct(data: any) {
+  
+  postAllProduct(data: any): void {
     this.productService.postAllProduct(data).subscribe({
       next:(res)=>{
         alert("Product has been added sucessfully")
