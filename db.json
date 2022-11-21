@@ -7,34 +7,16 @@
       "id": 1
     },
     {
-      "name": "Nasree",
-      "Qty": "2",
-      "Mrp": "12",
-      "id": 1
+      "name": "asif",
+      "Qty": "32",
+      "Mrp": "12142",
+      "id": 2
     },
     {
-      "name": "Nasree",
+      "name": "paracetamol",
       "Qty": "2",
-      "Mrp": "12",
-      "id": 1
-    },
-    {
-      "name": "Nasree",
-      "Qty": "2",
-      "Mrp": "12",
-      "id": 1
-    },
-    {
-      "name": "Nasree",
-      "Qty": "2",
-      "Mrp": "12",
-      "id": 1
-    },
-    {
-      "name": "Nasree",
-      "Qty": "2",
-      "Mrp": "12",
-      "id": 1
+      "Mrp": "20",
+      "id": 3
     }
   ],
   "customer": [

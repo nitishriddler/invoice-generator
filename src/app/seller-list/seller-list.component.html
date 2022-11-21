@@ -10,4 +10,19 @@
     </div>
 </div>
 <h1>Seller List</h1>
-<h2>{{sellerList | json}}</h2>
+
+<table >
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+  </tr>
+  <tr *ngFor="let seller of sellerList">
+    <td>{{seller.id}}</td>
+    <td>{{seller.name}}</td>
+    <td>{{seller.address}}</td>
+    <td>{{seller.phone}}</td>
+  </tr>
+</table>
+

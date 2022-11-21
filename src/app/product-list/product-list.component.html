@@ -10,45 +10,21 @@
     </div>
 </div>
 <h1>Product List</h1>
+<table >
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>Mrp</th>
+  </tr>
+  <tr *ngFor="let product of productList">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.Qty}}</td>
+    <td>{{product.Mrp}}</td>
+  </tr>
+</table>
 
-<h1>{{productList | json}}</h1>
 
-<ng-container *ngIf="productList && productList !=0">
-    <div *ngFor="let product of productList">
-        <span>{{product.name}}</span>
-    </div>
-</ng-container>
-<table mat-table [dataSource]="productList" class="mat-elevation-z8" *ngFor="let element of productList">
-
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-  
-    <!-- Position Column -->
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-    </ng-container>
-  
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-  
-    <!-- Weight Column -->
-    <ng-container matColumnDef="Qty">
-      <th mat-header-cell *matHeaderCellDef> Qty </th>
-      <td mat-cell *matCellDef="let element"> {{element.Qty}} </td>
-    </ng-container>
-  
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="Mrp">
-      <th mat-header-cell *matHeaderCellDef> Mrp </th>
-      <td mat-cell *matCellDef="let element"> {{element.Mrp}} </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
   
   
