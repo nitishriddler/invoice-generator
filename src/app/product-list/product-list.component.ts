@@ -11,21 +11,28 @@ import { MatSort } from '@angular/material/sort';
   styleUrls: ['./product-list.component.scss'],
 })
 export class ProductListComponent implements OnInit {
-  constructor(private router:Router, private productService: ProductService) {}
-  productList: any;
   dataSource!: MatTableDataSource<any>;
-
-
+  displayedColumns: string[]=['id','name','Qty','Mrp']
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+  
+  constructor(private router:Router, private productService: ProductService) {}
+  
   ngOnInit(): void {
     this.getProduct();
   }
-  displayedColumns: string[]=['id','name','Qty','Mrp']
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+  }
 
   getProduct() {
     this.productService.getAllProduct().subscribe((res) => {
-      this.productList = res;
       this.dataSource = new MatTableDataSource(<any>res);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
