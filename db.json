@@ -114,6 +114,12 @@
       "address": "dwdw",
       "phone": "780",
       "id": 7
+    },
+    {
+      "name": "nitish kumar",
+      "address": "sangam vihar",
+      "phone": "89897656",
+      "id": 8
     }
   ],
   "seller": [
@@ -158,6 +164,12 @@
       "address": "fmdfjdpf",
       "phone": "6607097987",
       "id": 7
+    },
+    {
+      "name": "Mohd. asif",
+      "address": "sangam vihar",
+      "phone": "987665443",
+      "id": 8
     }
   ]
 }

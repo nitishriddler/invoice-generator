@@ -22,6 +22,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { HeaderComponent } from './header/header.component';
 import { MatSortModule } from '@angular/material/sort';
+import { OrderComponent } from './order/order.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { MatSortModule } from '@angular/material/sort';
     CustomerListComponent,
     SellerListComponent,
     HeaderComponent,
+    OrderComponent,
   ],
   imports: [
     BrowserModule,
