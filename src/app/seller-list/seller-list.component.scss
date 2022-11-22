@@ -1,19 +1,9 @@
-
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 98%;
-    margin:auto;
-    
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(odd) {
-    background-color: #dddddd;
-  }
+  width: 100%;
+}
 
+.mat-elevation-z8{
+  width:98%;
+  margin: auto;
+ 
+}

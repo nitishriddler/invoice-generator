@@ -102,6 +102,18 @@
       "address": "sdd",
       "phone": "2132",
       "id": 5
+    },
+    {
+      "name": "sdj",
+      "address": "dsd",
+      "phone": "909000",
+      "id": 6
+    },
+    {
+      "name": "dwd",
+      "address": "dwdw",
+      "phone": "780",
+      "id": 7
     }
   ],
   "seller": [
@@ -110,6 +122,42 @@
       "address": "khanput",
       "phone": "987655",
       "id": 1
+    },
+    {
+      "name": "sdasa",
+      "address": "sdasds",
+      "phone": "78990",
+      "id": 2
+    },
+    {
+      "name": "efsdfsas",
+      "address": "dsdasa",
+      "phone": "6787979",
+      "id": 3
+    },
+    {
+      "name": "sdsdasa",
+      "address": "sfgfmamo",
+      "phone": "67697900",
+      "id": 4
+    },
+    {
+      "name": "ds,vvvp",
+      "address": "sdsdfaca",
+      "phone": "7979707",
+      "id": 5
+    },
+    {
+      "name": "ssavvmdlvdlvm",
+      "address": "kfvjodjdldv",
+      "phone": "73747379",
+      "id": 6
+    },
+    {
+      "name": "maskjfpoasfa",
+      "address": "fmdfjdpf",
+      "phone": "6607097987",
+      "id": 7
     }
   ]
 }
