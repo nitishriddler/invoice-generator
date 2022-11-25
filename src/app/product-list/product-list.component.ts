@@ -12,7 +12,7 @@ import { MatSort } from '@angular/material/sort';
 })
 export class ProductListComponent implements OnInit {
   dataSource!: MatTableDataSource<any>;
-  displayedColumns: string[]=['id','name','Qty','Mrp']
+  displayedColumns: string[]=['id','name','qty','Mrp']
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   

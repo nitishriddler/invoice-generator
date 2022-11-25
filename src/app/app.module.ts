@@ -23,6 +23,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { HeaderComponent } from './header/header.component';
 import { MatSortModule } from '@angular/material/sort';
 import { OrderComponent } from './order/order.component';
+import { MatSelect, MatSelectModule } from '@angular/material/select';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,10 @@ import { OrderComponent } from './order/order.component';
     HttpClientModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSelectModule,
+    MatCardModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

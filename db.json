@@ -1,175 +1,146 @@
 {
   "product": [
     {
-      "name": "Nasree",
-      "Qty": "2",
-      "Mrp": "12",
+      "name": "Analgin",
+      "qty": "10",
+      "Mrp": "4",
       "id": 1
     },
     {
-      "name": "asif",
-      "Qty": "32",
-      "Mrp": "12142",
+      "name": "Aspirin",
+      "qty": "12",
+      "Mrp": "3",
       "id": 2
     },
     {
-      "name": "paracetamol",
-      "Qty": "2",
-      "Mrp": "20",
+      "name": "Vitamin c",
+      "qty": "2",
+      "Mrp": "26",
       "id": 3
     },
     {
-      "name": "Bottle",
-      "Qty": "9",
-      "Mrp": "200",
+      "name": "Aciloc 150",
+      "qty": "40",
+      "Mrp": "40",
       "id": 4
     },
     {
-      "name": "Alibaba",
-      "Qty": "11",
-      "Mrp": "89808",
+      "name": "Aciloc RD",
+      "qty": "23",
+      "Mrp": "77",
       "id": 5
     },
     {
-      "name": "amoxli",
-      "Qty": "2",
-      "Mrp": "78",
+      "name": "Betnovate Cream",
+      "qty": "34",
+      "Mrp": "20",
       "id": 6
     },
     {
-      "name": "sdsld",
-      "Qty": "9",
-      "Mrp": "080",
+      "name": "Betadine",
+      "qty": "3",
+      "Mrp": "139",
       "id": 7
     },
     {
-      "name": "sdsd",
-      "Qty": "78",
-      "Mrp": "7879",
+      "name": "Cetrizine tablet",
+      "qty": "4",
+      "Mrp": "18",
       "id": 8
     },
     {
-      "name": "kusad",
-      "Qty": "3",
-      "Mrp": "89",
+      "name": "Cefix",
+      "qty": "6",
+      "Mrp": "119",
       "id": 9
     },
     {
-      "name": "asdsfa",
-      "Qty": "34",
-      "Mrp": "5678",
+      "name": "Ciplox",
+      "qty": "5",
+      "Mrp": "19",
       "id": 10
     },
     {
-      "name": "hsdasd",
-      "Qty": "232",
-      "Mrp": "898",
+      "name": "Corcin",
+      "qty": "34",
+      "Mrp": "23",
       "id": 11
     },
     {
-      "name": "sdfa",
-      "Qty": "9080",
-      "Mrp": "8999",
+      "name": "cypon syrup",
+      "qty": "23",
+      "Mrp": "113",
       "id": 12
+    },
+    {
+      "name": "Cetzine tablet",
+      "qty": "3",
+      "Mrp": "21",
+      "id": 13
+    },
+    {
+      "name": "Dolo",
+      "qty": "23",
+      "Mrp": "45",
+      "id": 14
+    },
+    {
+      "name": "Ecosprin",
+      "qty": "21",
+      "Mrp": "6",
+      "id": 15
+    },
+    {
+      "name": "Enzomac",
+      "qty": "2",
+      "Mrp": "372",
+      "id": 16
     }
   ],
   "customer": [
     {
-      "name": "asif",
-      "address": "sangam",
+      "name": "Asif",
+      "address": "Sangam vihar",
+      "phone": "4789998877",
       "id": 1
     },
     {
-      "name": "asif",
-      "address": "sangam",
-      "phone": "9898989",
+      "name": "Nasre alam",
+      "address": "khanpur",
+      "phone": "898080809",
       "id": 2
     },
     {
-      "name": "dsdsd",
-      "address": "dsd",
-      "phone": "32",
+      "name": "Irshad bhaiya",
+      "address": "delhi",
+      "phone": "898980980",
       "id": 3
     },
     {
-      "name": "dsdsd",
-      "address": "dsd",
-      "phone": "32",
+      "name": "Sohail bhaiya",
+      "address": "okhla",
+      "phone": "2434353535",
       "id": 4
     },
     {
-      "name": "dsd",
-      "address": "sdd",
-      "phone": "2132",
+      "name": "Sachin kumar",
+      "address": "vasant",
+      "phone": "995898101",
       "id": 5
-    },
-    {
-      "name": "sdj",
-      "address": "dsd",
-      "phone": "909000",
-      "id": 6
-    },
-    {
-      "name": "dwd",
-      "address": "dwdw",
-      "phone": "780",
-      "id": 7
-    },
-    {
-      "name": "nitish kumar",
-      "address": "sangam vihar",
-      "phone": "89897656",
-      "id": 8
     }
   ],
   "seller": [
     {
-      "name": "json",
-      "address": "khanput",
-      "phone": "987655",
+      "name": "Nitish kumar",
+      "address": "sangam vihar",
+      "phone": "7889898898",
       "id": 1
     },
     {
-      "name": "sdasa",
-      "address": "sdasds",
-      "phone": "78990",
+      "name": "Sanjay Kumar",
+      "address": "Nehru place",
+      "phone": "8676867868",
       "id": 2
-    },
-    {
-      "name": "efsdfsas",
-      "address": "dsdasa",
-      "phone": "6787979",
-      "id": 3
-    },
-    {
-      "name": "sdsdasa",
-      "address": "sfgfmamo",
-      "phone": "67697900",
-      "id": 4
-    },
-    {
-      "name": "ds,vvvp",
-      "address": "sdsdfaca",
-      "phone": "7979707",
-      "id": 5
-    },
-    {
-      "name": "ssavvmdlvdlvm",
-      "address": "kfvjodjdldv",
-      "phone": "73747379",
-      "id": 6
-    },
-    {
-      "name": "maskjfpoasfa",
-      "address": "fmdfjdpf",
-      "phone": "6607097987",
-      "id": 7
-    },
-    {
-      "name": "Mohd. asif",
-      "address": "sangam vihar",
-      "phone": "987665443",
-      "id": 8
     }
   ]
 }
