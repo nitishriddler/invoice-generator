@@ -4,6 +4,7 @@ import { CustomerService } from 'src/services/customer.service';
 import { ProductService } from 'src/services/product.service';
 import { product } from '../model/product.model';
 import { FormControl, Validators } from '@angular/forms';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-order',
@@ -11,10 +12,12 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./order.component.scss'],
 })
 export class OrderComponent implements OnInit {
-  sellerList: any;
-  customerList: any;
+  sellerList!: Array<any>;
+  customerList!: Array<any>;
   productList!: Array<any>;
   addedProducts!: Array<any>;
+  seller: any = {};
+  customer: any = {};
 
   constructor(
     private sellerService: SellerService,
@@ -30,12 +33,12 @@ export class OrderComponent implements OnInit {
   }
 
   getAllSeller() {
-    this.sellerService.getAllSeller().subscribe((res) => {
+    this.sellerService.getAllSeller().subscribe((res: any) => {
       this.sellerList = res;
     });
   }
   getAllCustomers() {
-    this.customerService.getAllCustomers().subscribe((res) => {
+    this.customerService.getAllCustomers().subscribe((res: any) => {
       this.customerList = res;
     });
   }
@@ -49,7 +52,10 @@ export class OrderComponent implements OnInit {
     this.addedProducts.push({});
   }
 
- 
+  deleteItem(index: number) {
+    this.addedProducts.splice(index,1);
+  }
+
   calculateAmount(item: any) {
     let product = this.productList.find((x) => x.id == item.id);
     if (product) {
@@ -60,7 +66,14 @@ export class OrderComponent implements OnInit {
 
   get totalAmount() {
     return this.addedProducts.reduce((p, c) => {
-      return p + (isNaN(c.amount) ? 0: c.amount );
+      return p + (isNaN(c.amount) ? 0 : c.amount);
     }, 0);
+  }
+
+  sellerChanged(event: any) {
+    this.seller = this.sellerList.find((x) => x.id === event.value);
+  }
+  customerChanged(event: any) {
+    this.customer = this.customerList.find((x) => x.id === event.value);
   }
 }

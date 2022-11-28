@@ -141,6 +141,12 @@
       "address": "Nehru place",
       "phone": "8676867868",
       "id": 2
+    },
+    {
+      "name": "Asus",
+      "address": "Nehru place",
+      "phone": "5678976655",
+      "id": 3
     }
   ]
 }

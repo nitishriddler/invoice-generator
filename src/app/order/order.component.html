@@ -1,61 +1,58 @@
 <app-header></app-header>
 <h1 class="order" [style.marginTop]="'10px'"><b>TAKE ORDER</b></h1>
-<div  >
+<div fxLayout="column" fxLayoutAlign="center center">
     <!-- seller details -->
-    <h1 [style.marginTop]="'10px'" [style.marginLeft]="'40px'">Seller detail</h1>
-    <div fxLayout="row" fxLayoutGap="20px" [style.marginLeft]="'40px'">
-        <div>
-            <mat-form-field appearance="fill" style="width: 245px !important;">
-                <mat-label>Select name</mat-label>
-                <mat-select>
-                    <mat-option [value]="seller.id" *ngFor="let seller of sellerList">{{seller.name}}</mat-option>
-                </mat-select>
-                <mat-hint align="end">Seller name ^</mat-hint>
-            </mat-form-field>
-        </div>
-        <div>
-            <mat-card style="width: 104px !important;">
-                <mat-card-content>Phone number</mat-card-content>
-            </mat-card>
-        </div>
-        <div>
-            <mat-card style="width: 400px !important;">
-                <mat-card-content>Address</mat-card-content>
-            </mat-card>
-        </div>
-    </div>
-    <!-- customer details -->
-    <h1 [style.marginTop]="'40px'" [style.marginLeft]="'40px'">Customer detail</h1>
-    <div fxLayout="row" fxLayoutGap="20px" [style.marginLeft]="'40px'">
-        <div>
-            <mat-form-field appearance="fill" style="width: 245px !important;">
-                <mat-label>Select name</mat-label>
-                <mat-select>
-                    <mat-option [value]="customer.id" *ngFor="let customer of customerList">{{customer.name}}
-                    </mat-option>
 
-                </mat-select>
-                <mat-hint align="end">customer name ^</mat-hint>
-            </mat-form-field>
-        </div>
+
+    <div fxLayout="row" fxLayoutGap="250px" [style.marginLeft]="'40px'">
         <div>
-            <mat-card style="width: 104px !important;">
-                <mat-card-content>Phone number</mat-card-content>
-            </mat-card>
+            <h1 [style.marginTop]="'10px'" [style.marginLeft]="'40px'">Seller detail</h1>
+            <div>
+
+                <mat-form-field appearance="fill" style="width: 245px !important;">
+                    <mat-label>Select name</mat-label>
+                    <mat-select [ngModel]="seller.id" (selectionChange)="sellerChanged($event)">
+                        <mat-option [value]="item.id" *ngFor="let item of sellerList">{{item.name}}</mat-option>
+                    </mat-select>
+                    <mat-hint align="end">Seller name ^</mat-hint>
+                </mat-form-field>
+            </div>
+            <div  fxLayout="column" fxLayoutAlign="center center" >
+                <p>{{seller.phone}}</p>
+                <p>{{seller.address}}</p>
+            </div>
+
         </div>
+        <!-- customer Details -->
         <div>
-            <mat-card style="width: 400px !important;">
-                <mat-card-content>Address</mat-card-content>
-            </mat-card>
+            <h1 [style.marginLeft]="'40px'">Customer detail</h1>
+            <div>
+                <mat-form-field appearance="fill" style="width: 245px !important;">
+                    <mat-label>Select name</mat-label>
+                    <mat-select [ngModel]="customer.id" (selectionChange)="customerChanged($event)">
+                        <mat-option [value]="cust.id" *ngFor="let cust of customerList">{{cust.name}}
+                        </mat-option>
+
+                    </mat-select>
+                    <mat-hint align="end">customer name ^</mat-hint>
+                </mat-form-field>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <p>{{customer.phone}}</p>
+                <p>{{customer.address}}</p>
+               
+            </div>
+
         </div>
     </div>
     <!-- product details -->
     <h1 [style.marginTop]="'40px'" [style.marginLeft]="'40px'">Product details</h1>
 
 
-    <div *ngFor="let item of addedProducts" fxLayout="row" fxLayoutGap="20px" [style.marginLeft]="'40px'">
-        <div >
-            <mat-form-field appearance="fill" style="width: 340px !important;">
+    <div *ngFor="let item of addedProducts; let i = index" fxLayout="row" fxLayoutGap="20px" [style.marginLeft]="'40px'">
+        
+        <div>
+            <mat-form-field appearance="fill" style="width: 245px !important;">
                 <mat-label>Select product</mat-label>
                 <mat-select [(ngModel)]="item.id" (ngModelChange)="calculateAmount(item)">
                     <mat-option *ngFor="let product of productList" [value]="product.id">{{product.name}}</mat-option>
@@ -64,27 +61,43 @@
             </mat-form-field>
         </div>
         <div>
-            <mat-form-field appearance="fill"style="width: 110px !important;">
+            <mat-form-field appearance="fill" style="width: 150px !important;">
                 <mat-label>Quantity</mat-label>
                 <input matInput name="qty" matInput placeholder="Enter Quantity" [(ngModel)]="item.qty"
                     (ngModelChange)="calculateAmount(item)" />
             </mat-form-field>
         </div>
         <div>
-            <mat-card style="width: 200px !important;">
-                <mat-card-content>Mrp - {{item.amount}}</mat-card-content>
-            </mat-card>
+            <mat-form-field appearance="fill" style="width: 150px !important;">
+                <mat-label>Price</mat-label>
+                <input matInput name="price" placeholder="Price" [(ngModel)]="item.mrp" readonly>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill" style="width: 180px !important;">
+                <mat-label>Amount</mat-label>
+                <input matInput name="amount" placeholder="amount" [(ngModel)]="item.amount" readonly>
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-fab color="basic" aria-label="Example icon button with a delete icon" (click)="deleteItem(i)">
+                <mat-icon>delete</mat-icon>
+              </button>
         </div>
 
     </div>
-    <div>
-        <button mat-button (click)="addItem()">+ Add more</button>
+    <div fxLayout="row" fxLayoutGap="332px" [style.marginLeft]="'40px'">
+        <div>
+            <button mat-raised-button (click)="addItem()">+ Add more</button>
+        </div>
+        <!-- total amount -->
+        <div fxLayout="row" fxLayoutGap="20px" [style.marginLeft]="'40px'">
+            <h3>Total amount</h3>
+            <mat-card style="width: 120px !important;">
+                <mat-card-content>{{totalAmount}}</mat-card-content>
+            </mat-card>
+
+        </div>
     </div>
-    <!-- total amount -->
-    <div fxLayout="row" fxLayoutGap="20px" [style.marginLeft]="'40px'">
-        <h3>Total amount</h3>
-        <mat-card style="width: 200px !important;">
-            <mat-card-content>{{totalAmount}}</mat-card-content>
-        </mat-card>
-    </div>
+
 </div>
