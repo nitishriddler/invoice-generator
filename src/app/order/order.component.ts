@@ -76,4 +76,5 @@ export class OrderComponent implements OnInit {
   customerChanged(event: any) {
     this.customer = this.customerList.find((x) => x.id === event.value);
   }
+ 
 }
