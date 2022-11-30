@@ -3,8 +3,9 @@ import { SellerService } from 'src/services/seller.service';
 import { CustomerService } from 'src/services/customer.service';
 import { ProductService } from 'src/services/product.service';
 import { product } from '../model/product.model';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, NgForm, Validators } from '@angular/forms';
 import { __values } from 'tslib';
+import { OrderService } from 'src/services/order.service';
 
 @Component({
   selector: 'app-order',
@@ -22,7 +23,8 @@ export class OrderComponent implements OnInit {
   constructor(
     private sellerService: SellerService,
     private customerService: CustomerService,
-    private productService: ProductService
+    private productService: ProductService,
+    private orderService: OrderService
   ) {}
 
   ngOnInit(): void {
@@ -53,7 +55,7 @@ export class OrderComponent implements OnInit {
   }
 
   deleteItem(index: number) {
-    this.addedProducts.splice(index,1);
+    this.addedProducts.splice(index, 1);
   }
 
   calculateAmount(item: any) {
@@ -73,8 +75,23 @@ export class OrderComponent implements OnInit {
   sellerChanged(event: any) {
     this.seller = this.sellerList.find((x) => x.id === event.value);
   }
+
   customerChanged(event: any) {
     this.customer = this.customerList.find((x) => x.id === event.value);
   }
- 
+
+  postAllorder(form: NgForm) {
+    if (!form.invalid) {
+      form.value.totalAmount = this.totalAmount;
+      this.orderService.postAllorder(form.value).subscribe({
+        next: (res) => {
+          alert('Detail of order has been saved');
+          location.reload();
+        },
+        error: (er) => {
+          'something went wrong';
+        },
+      });
+    }
+  }
 }

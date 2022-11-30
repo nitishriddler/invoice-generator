@@ -148,5 +148,90 @@
       "phone": "5678976655",
       "id": 3
     }
+  ],
+  "order": [
+    {
+      "sellerId": 2,
+      "customerId": 2,
+      "items[0].name": 5,
+      "items[0].qty": "2",
+      "items[0].price": "77",
+      "items[0].amount": 154,
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "items[0].name": 5,
+      "items[0].qty": "3",
+      "items[0].price": "77",
+      "items[0].amount": 231,
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "sellerId": 2,
+      "customerId": 2,
+      "items[0].name": 2,
+      "items[0].qty": "2",
+      "items[0].price": "3",
+      "items[0].amount": 6,
+      "items[1].name": 3,
+      "items[1].qty": "3",
+      "items[1].price": "26",
+      "items[1].amount": 78,
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "sellerId": 2,
+      "customerId": 2,
+      "items[0].name": 2,
+      "items[0].qty": "4",
+      "items[0].price": "3",
+      "items[0].amount": 12,
+      "items[1].name": 3,
+      "items[1].qty": "5",
+      "items[1].price": "26",
+      "items[1].amount": 130,
+      "id": 13
+    },
+    {
+      "sellerId": 1,
+      "customerId": 2,
+      "items[0].name": 16,
+      "items[0].qty": "343",
+      "items[0].price": "372",
+      "items[0].amount": 127596,
+      "items[1].name": 4,
+      "items[1].qty": "3",
+      "items[1].price": "40",
+      "items[1].amount": 120,
+      "totalAmount": 127716,
+      "id": 14
+    }
   ]
 }

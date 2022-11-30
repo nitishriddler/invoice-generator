@@ -1,7 +1,7 @@
 <app-header></app-header>
 <h1 class="order" [style.marginTop]="'10px'"><b>TAKE ORDER</b></h1>
 
-<form #myForm="ngForm">
+<form #myForm="ngForm" (ngSubmit)="postAllorder(myForm) ">
     <div fxLayout="column" fxLayoutAlign="center center">
         <!-- seller details -->
         <div fxLayout="row" fxLayoutGap="250px" [style.marginLeft]="'40px'">
@@ -10,7 +10,7 @@
                 <div>
 
                     <mat-form-field appearance="fill" style="width: 245px !important;">
-                        <mat-label>Select name</mat-label>
+                        <mat-label>Select seller</mat-label>
                         <mat-select name="sellerId" [ngModel]="seller.id" (selectionChange)="sellerChanged($event)"
                             required>
                             <mat-option [value]="item.id" *ngFor="let item of sellerList">{{item.name}}</mat-option>
@@ -29,7 +29,7 @@
                 <h1 [style.marginLeft]="'40px'">Customer detail</h1>
                 <div>
                     <mat-form-field appearance="fill" style="width: 245px !important;">
-                        <mat-label>Select name</mat-label>
+                        <mat-label>Select customer</mat-label>
                         <mat-select name="customerId" [ngModel]="customer.id"
                             (selectionChange)="customerChanged($event)" required>
                             <mat-option [value]="cust.id" *ngFor="let cust of customerList">{{cust.name}}
@@ -93,24 +93,26 @@
             </div>
 
         </div>
-        <div fxLayout="row" fxLayoutGap="332px" [style.marginLeft]="'40px'">
-            <div>
-                <button mat-raised-button (click)="addItem()">+ Add more</button>
+        <div fxLayout="row" fxLayoutGap="332px" [style.marginLeft]="'40px'" [style.marginTop]="'20px'">
+            <div [style.marginTop]="'60px'">
+                <span class="btn-add" mat-raised-button (click)="addItem()">+ Add more</span>
             </div>
             <!-- total amount -->
             <div fxLayout="row" fxLayoutGap="20px" [style.marginLeft]="'40px'">
                 <h3>Total amount</h3>
+                
                 <mat-card style="width: 120px !important;">
-                    <mat-card-content>{{totalAmount}}</mat-card-content>
+                    <mat-card-content name="totalAmount">{{totalAmount}}</mat-card-content>
                 </mat-card>
-
+            
             </div>
         </div>
         <br>
 
         <div class="sub">
-            <button mat-raised-button>Submit</button>
+            <button mat-raised-button type="submit">Submit</button>
 
         </div>
     </div>
+   
 </form>

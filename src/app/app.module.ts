@@ -25,6 +25,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { OrderComponent } from './order/order.component';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
+import { OrderListComponent } from './order-list/order-list.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import {MatCardModule} from '@angular/material/card';
     SellerListComponent,
     HeaderComponent,
     OrderComponent,
+    OrderListComponent,
   ],
   imports: [
     BrowserModule,
