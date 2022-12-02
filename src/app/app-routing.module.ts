@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerComponent } from './customer/customer.component';
 import { HomeComponent } from './home/home.component';
+import { OrderListComponent } from './order-list/order-list.component';
 import { OrderComponent } from './order/order.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'product-list', component: ProductListComponent },
   { path: 'customer-list', component: CustomerListComponent },
   { path: 'seller-list', component: SellerListComponent },
-  { path: 'order', component: OrderComponent}
+  { path: 'order', component: OrderComponent},
+  { path: 'order-list',component: OrderListComponent}
 ];
 
 @NgModule({

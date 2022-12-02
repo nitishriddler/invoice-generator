@@ -81,6 +81,7 @@ export class OrderComponent implements OnInit {
   }
 
   postAllorder(form: NgForm) {
+    console.log(form);
     if (!form.invalid) {
       form.value.totalAmount = this.totalAmount;
       this.orderService.postAllorder(form.value).subscribe({

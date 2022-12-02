@@ -1,6 +1,14 @@
 <app-header></app-header>
-<h1 class="order" [style.marginTop]="'10px'"><b>TAKE ORDER</b></h1>
+<div [style.marginTop]="'10px'" [style.marginLeft]="'30px'" fxLayoutAlign="space-between center"  >
+    <div >
+        <h1 class="order"><b>TAKE ORDER</b></h1>
+    </div>
+    <div fxLayoutGap="20px" [style.marginRight]="'30px'">
+        <button mat-raised-button color="accent" onclick="history.back()">Back</button>
+        <button mat-raised-button routerLink="/order-list">Order-list</button>
+    </div>
 
+</div>
 <form #myForm="ngForm" (ngSubmit)="postAllorder(myForm) ">
     <div fxLayout="column" fxLayoutAlign="center center">
         <!-- seller details -->
@@ -100,11 +108,11 @@
             <!-- total amount -->
             <div fxLayout="row" fxLayoutGap="20px" [style.marginLeft]="'40px'">
                 <h3>Total amount</h3>
-                
+
                 <mat-card style="width: 120px !important;">
                     <mat-card-content name="totalAmount">{{totalAmount}}</mat-card-content>
                 </mat-card>
-            
+
             </div>
         </div>
         <br>
@@ -114,5 +122,5 @@
 
         </div>
     </div>
-   
+
 </form>

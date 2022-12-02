@@ -147,91 +147,84 @@
       "address": "Nehru place",
       "phone": "5678976655",
       "id": 3
+    },
+    {
+      "name": "Alibaba",
+      "address": "Kanpur",
+      "phone": "7979798989",
+      "id": 4
     }
   ],
   "order": [
     {
+      "sellerId": 3,
+      "customerId": 5,
+      "items[0].name": 3,
+      "items[0].qty": "1",
+      "items[0].price": "26",
+      "items[0].amount": 26,
+      "items[1].name": 4,
+      "items[1].qty": "2",
+      "items[1].price": "40",
+      "items[1].amount": 80,
+      "items[2].name": 5,
+      "items[2].qty": "3",
+      "items[2].price": "77",
+      "items[2].amount": 231,
+      "items[3].name": 6,
+      "items[3].qty": "3",
+      "items[3].price": "20",
+      "items[3].amount": 60,
+      "totalAmount": 397,
+      "id": 1
+    },
+    {
+      "sellerId": 3,
+      "customerId": 3,
+      "items[0].name": 12,
+      "items[0].qty": "3",
+      "items[0].price": "113",
+      "items[0].amount": 339,
+      "items[1].name": 5,
+      "items[1].qty": "3",
+      "items[1].price": "77",
+      "items[1].amount": 231,
+      "totalAmount": 570,
+      "id": 2
+    },
+    {
       "sellerId": 2,
-      "customerId": 2,
+      "customerId": 4,
       "items[0].name": 5,
       "items[0].qty": "2",
       "items[0].price": "77",
       "items[0].amount": 154,
-      "id": 1
-    },
-    {
-      "id": 2
-    },
-    {
+      "totalAmount": 154,
       "id": 3
     },
     {
+      "sellerId": 2,
+      "customerId": 5,
+      "items[0].name": 10,
+      "items[0].qty": "5",
+      "items[0].price": "19",
+      "items[0].amount": 95,
+      "items[1].name": 10,
+      "items[1].qty": "6",
+      "items[1].price": "19",
+      "items[1].amount": 114,
+      "totalAmount": 209,
       "id": 4
     },
     {
-      "items[0].name": 5,
-      "items[0].qty": "3",
-      "items[0].price": "77",
-      "items[0].amount": 231,
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "sellerId": 2,
-      "customerId": 2,
-      "items[0].name": 2,
-      "items[0].qty": "2",
-      "items[0].price": "3",
-      "items[0].amount": 6,
-      "items[1].name": 3,
-      "items[1].qty": "3",
-      "items[1].price": "26",
-      "items[1].amount": 78,
-      "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "id": 10
-    },
-    {
-      "id": 11
-    },
-    {
-      "id": 12
-    },
-    {
-      "sellerId": 2,
-      "customerId": 2,
-      "items[0].name": 2,
-      "items[0].qty": "4",
-      "items[0].price": "3",
-      "items[0].amount": 12,
-      "items[1].name": 3,
-      "items[1].qty": "5",
-      "items[1].price": "26",
-      "items[1].amount": 130,
-      "id": 13
-    },
-    {
       "sellerId": 1,
-      "customerId": 2,
-      "items[0].name": 16,
-      "items[0].qty": "343",
-      "items[0].price": "372",
-      "items[0].amount": 127596,
-      "items[1].name": 4,
-      "items[1].qty": "3",
-      "items[1].price": "40",
-      "items[1].amount": 120,
-      "totalAmount": 127716,
-      "id": 14
+      "customerId": 5,
+      "items[0].name": 4,
+      "items[0].qty": "7",
+      "items[0].price": "40",
+      "items[0].amount": 280,
+      "totalAmount": 280,
+      "id": 5
     }
   ]
 }
