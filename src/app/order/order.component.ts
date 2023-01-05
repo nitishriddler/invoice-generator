@@ -83,8 +83,14 @@ export class OrderComponent implements OnInit {
   postAllorder(form: NgForm) {
     console.log(form);
     if (!form.invalid) {
-      form.value.totalAmount = this.totalAmount;
-      this.orderService.postAllorder(form.value).subscribe({
+      // form.value.totalAmount = this.totalAmount;
+      const value = {
+        sellerId: this.seller.id,
+        customerId: this.customer.id,
+        items: this.addedProducts,
+        totalAmount: this.totalAmount,
+      };
+      this.orderService.postAllorder(value).subscribe({
         next: (res) => {
           alert('Detail of order has been saved');
           location.reload();

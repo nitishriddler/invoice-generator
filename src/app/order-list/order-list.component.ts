@@ -8,6 +8,7 @@ import { MatSort } from '@angular/material/sort';
 import { SellerService } from 'src/services/seller.service';
 import { forkJoin } from 'rxjs';
 import { CustomerService } from 'src/services/customer.service';
+import { ProductService } from 'src/services/product.service';
 
 @Component({
   selector: 'app-order-list',
@@ -19,7 +20,7 @@ export class OrderListComponent implements OnInit {
     'id',
     'sellerid',
     'customerid',
-    'itemid',
+    'items',
     'itemQty',
     'itemprice',
     'itemamount',
@@ -33,10 +34,13 @@ export class OrderListComponent implements OnInit {
     private OrderService: OrderService,
     private router: Router,
     private sellerService: SellerService,
-    private customerService: CustomerService
+    private customerService: CustomerService,
+    private productService: ProductService
   ) {}
 
   sellerList: string[] = [];
+  orders:any;
+  
 
   ngOnInit(): void {
     this.getOrder();
@@ -55,10 +59,12 @@ export class OrderListComponent implements OnInit {
       this.OrderService.getAllorder(),
       this.sellerService.getAllSeller(),
       this.customerService.getAllCustomers(),
+      this.productService.getAllProduct(),
     ]).subscribe((resArr: Array<any>) => {
       const orders = resArr[0];
       const sellers = resArr[1];
       const customer = resArr[2];
+      const product = resArr[3];
 
       orders.forEach((element: { sellerName: any; sellerId: any }) => {
         element.sellerName = sellers.find(
@@ -70,6 +76,12 @@ export class OrderListComponent implements OnInit {
           (x: { id: any }) => x.id === element.customerId
         )?.name;
       });
+      orders.forEach((element: { productName: any; productId: any }) => {
+        element.productName = product.find(
+          (x: { id: any }) => x.id === element.productId
+        )?.name;
+      });
+
 
       this.dataSource = new MatTableDataSource(<any>orders);
       this.dataSource.paginator = this.paginator;
