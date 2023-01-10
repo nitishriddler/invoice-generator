@@ -24,8 +24,9 @@ import { HeaderComponent } from './header/header.component';
 import { MatSortModule } from '@angular/material/sort';
 import { OrderComponent } from './order/order.component';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { OrderListComponent } from './order-list/order-list.component';
+import { NgxPrintModule } from 'ngx-print';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,7 @@ import { OrderListComponent } from './order-list/order-list.component';
     MatSortModule,
     MatSelectModule,
     MatCardModule,
-    
+    NgxPrintModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
