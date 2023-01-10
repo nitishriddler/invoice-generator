@@ -127,6 +127,18 @@
       "address": "vasant",
       "phone": "995898101",
       "id": 5
+    },
+    {
+      "name": "Rishab ",
+      "address": "Pune, Pincode. - 889898",
+      "phone": "8889000888",
+      "id": 6
+    },
+    {
+      "name": "Rishab",
+      "address": "Pune, Pincode. - 889898",
+      "phone": "9809890803",
+      "id": 7
     }
   ],
   "seller": [
@@ -247,6 +259,26 @@
       ],
       "totalAmount": 2340,
       "id": 4
+    },
+    {
+      "sellerId": 3,
+      "customerId": 6,
+      "items": [
+        {
+          "id": 3,
+          "mrp": "26",
+          "amount": 104,
+          "qty": "4"
+        },
+        {
+          "id": 13,
+          "mrp": "21",
+          "amount": 105,
+          "qty": "5"
+        }
+      ],
+      "totalAmount": 209,
+      "id": 5
     }
   ]
 }

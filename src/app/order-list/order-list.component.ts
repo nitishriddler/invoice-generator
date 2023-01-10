@@ -9,11 +9,19 @@ import { SellerService } from 'src/services/seller.service';
 import { forkJoin } from 'rxjs';
 import { CustomerService } from 'src/services/customer.service';
 import { ProductService } from 'src/services/product.service';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-order-list',
   templateUrl: './order-list.component.html',
   styleUrls: ['./order-list.component.scss'],
+  animations: [
+    trigger('detailExpand', [
+      state('collapsed', style({height: '0px', minHeight: '0', display: 'none'})),
+      state('expanded', style({height: '*'})),
+      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+    ]),
+  ],
 })
 export class OrderListComponent implements OnInit {
   displayedColumns: string[] = [
@@ -26,6 +34,8 @@ export class OrderListComponent implements OnInit {
     'itemamount',
     'totalamount',
   ];
+  columnsToDisplay2 = ['items', 'itemQty', 'itemprice'];
+
   dataSource!: MatTableDataSource<any>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -39,8 +49,8 @@ export class OrderListComponent implements OnInit {
   ) {}
 
   sellerList: string[] = [];
-  orders:any;
-  
+  orders: any;
+  expandedorder: any;
 
   ngOnInit(): void {
     this.getOrder();
@@ -82,13 +92,9 @@ export class OrderListComponent implements OnInit {
         )?.name;
       });
 
-
       this.dataSource = new MatTableDataSource(<any>orders);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     });
   }
-
-  
 }
-  
