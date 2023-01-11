@@ -367,6 +367,124 @@
       ],
       "totalAmount": 240,
       "id": 10
+    },
+    {
+      "sellerId": 2,
+      "customerId": 3,
+      "items": [
+        {
+          "id": 4,
+          "mrp": "40",
+          "amount": 320,
+          "qty": "8"
+        },
+        {
+          "id": 6,
+          "mrp": "20",
+          "amount": 80,
+          "qty": "4"
+        }
+      ],
+      "totalAmount": 400,
+      "id": 11
+    },
+    {
+      "sellerId": 3,
+      "customerId": 2,
+      "items": [
+        {
+          "id": 6,
+          "mrp": "20",
+          "amount": 180,
+          "qty": "9"
+        }
+      ],
+      "totalAmount": 180,
+      "id": 12
+    },
+    {
+      "sellerId": 2,
+      "customerId": 3,
+      "items": [
+        {
+          "id": 3,
+          "mrp": "26",
+          "amount": 78,
+          "qty": "3"
+        }
+      ],
+      "totalAmount": 78,
+      "id": 13
+    },
+    {
+      "sellerId": 2,
+      "customerId": 4,
+      "items": [
+        {
+          "id": 5,
+          "mrp": "77",
+          "amount": 231,
+          "qty": "3"
+        }
+      ],
+      "totalAmount": 231,
+      "id": 14
+    },
+    {
+      "sellerId": 2,
+      "customerId": 2,
+      "items": [
+        {
+          "id": 5,
+          "mrp": "77",
+          "amount": 231,
+          "qty": "3"
+        }
+      ],
+      "totalAmount": 231,
+      "id": 15
+    },
+    {
+      "sellerId": 1,
+      "customerId": 6,
+      "items": [
+        {
+          "id": 4,
+          "mrp": "40",
+          "amount": 240,
+          "qty": "6"
+        }
+      ],
+      "totalAmount": 240,
+      "id": 16
+    },
+    {
+      "sellerId": 2,
+      "customerId": 2,
+      "items": [
+        {
+          "id": 4,
+          "mrp": "40",
+          "amount": 200,
+          "qty": "5"
+        }
+      ],
+      "totalAmount": 200,
+      "id": 17
+    },
+    {
+      "sellerId": 3,
+      "customerId": 1,
+      "items": [
+        {
+          "id": 1,
+          "mrp": "4",
+          "amount": 4,
+          "qty": "1"
+        }
+      ],
+      "totalAmount": 4,
+      "id": 18
     }
   ]
 }

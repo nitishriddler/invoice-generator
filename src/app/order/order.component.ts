@@ -6,7 +6,7 @@ import { product } from '../model/product.model';
 import { FormControl, NgForm, Validators } from '@angular/forms';
 import { __values } from 'tslib';
 import { OrderService } from 'src/services/order.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-order',
@@ -20,12 +20,14 @@ export class OrderComponent implements OnInit {
   addedProducts!: Array<any>;
   seller: any = {};
   customer: any = {};
+  orderId: any;
 
   constructor(
     private sellerService: SellerService,
     private customerService: CustomerService,
     private productService: ProductService,
-    private orderService: OrderService
+    private orderService: OrderService,
+    private route: Router
   ) {}
 
   ngOnInit(): void {
@@ -92,9 +94,9 @@ export class OrderComponent implements OnInit {
         totalAmount: this.totalAmount,
       };
       this.orderService.postAllorder(value).subscribe({
-        next: (res) => {
-          alert('Detail of order has been saved');
-          location.reload();
+        next: (res: any) => {
+          this.orderId = res.id;
+          this.route.navigate(['preview'], { queryParams: { id: res.id } }  );
         },
         error: (er) => {
           'something went wrong';
