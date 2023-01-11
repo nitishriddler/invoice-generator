@@ -279,6 +279,94 @@
       ],
       "totalAmount": 209,
       "id": 5
+    },
+    {
+      "sellerId": 1,
+      "customerId": 2,
+      "items": [
+        {
+          "id": 2,
+          "mrp": "3",
+          "amount": 12,
+          "qty": "4"
+        },
+        {
+          "id": 3,
+          "mrp": "26",
+          "amount": 78,
+          "qty": "3"
+        }
+      ],
+      "totalAmount": 90,
+      "id": 6
+    },
+    {
+      "sellerId": 4,
+      "customerId": 6,
+      "items": [
+        {
+          "id": 16,
+          "mrp": "372",
+          "amount": 1116,
+          "qty": "3"
+        },
+        {
+          "id": 14,
+          "mrp": "45",
+          "amount": 225,
+          "qty": "5"
+        }
+      ],
+      "totalAmount": 1341,
+      "id": 7
+    },
+    {
+      "sellerId": 2,
+      "customerId": 4,
+      "items": [
+        {
+          "id": 3,
+          "mrp": "26",
+          "amount": 156,
+          "qty": "6"
+        },
+        {
+          "id": 3,
+          "mrp": "26",
+          "amount": 1404,
+          "qty": "54"
+        }
+      ],
+      "totalAmount": 1560,
+      "id": 8
+    },
+    {
+      "sellerId": 3,
+      "customerId": 3,
+      "items": [
+        {
+          "id": 2,
+          "mrp": "3",
+          "amount": 12,
+          "qty": "4"
+        }
+      ],
+      "totalAmount": 12,
+      "id": 9
+    },
+    {
+      "sellerId": 1,
+      "customerId": 6,
+      "items": [
+        {
+          "id": 4,
+          "mrp": "40",
+          "amount": 240,
+          "qty": "6"
+        }
+      ],
+      "totalAmount": 240,
+      "id": 10
     }
   ]
 }

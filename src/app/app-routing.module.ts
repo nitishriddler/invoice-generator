@@ -5,6 +5,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { HomeComponent } from './home/home.component';
 import { OrderListComponent } from './order-list/order-list.component';
 import { OrderComponent } from './order/order.component';
+import { PreviewComponent } from './preview/preview.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
 import { SellerListComponent } from './seller-list/seller-list.component';
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'customer-list', component: CustomerListComponent },
   { path: 'seller-list', component: SellerListComponent },
   { path: 'order', component: OrderComponent},
-  { path: 'order-list',component: OrderListComponent}
+  { path: 'order-list',component: OrderListComponent},
+  { path: 'preview',component: PreviewComponent}
 ];
 
 @NgModule({

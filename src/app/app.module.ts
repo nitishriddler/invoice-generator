@@ -27,6 +27,7 @@ import { MatSelect, MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { OrderListComponent } from './order-list/order-list.component';
 import { NgxPrintModule } from 'ngx-print';
+import { PreviewComponent } from './preview/preview.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { NgxPrintModule } from 'ngx-print';
     HeaderComponent,
     OrderComponent,
     OrderListComponent,
+    PreviewComponent,
   ],
   imports: [
     BrowserModule,
